@@ -20,7 +20,7 @@ import prawanbri from './Food-imgs/prawan-bri.jpg';
 import chibri from './Food-imgs/ChickenBiryani.webp';
 import muttonbri from './Food-imgs/Mutton-Biryani.jpg';
 import chimubri from './Food-imgs/chicken-bir-mu.webp';
-import panner65 from './Food-imgs/paneer65.webp';
+import panner65 from './Food-imgs/Paneer65.webp';
 import pannertik from './Food-imgs/panner-tika.webp';
 import gobi from './Food-imgs/Gobi-Manchi.webp';
 import pannerbut from './Food-imgs/pannerbutmas.jpg';
