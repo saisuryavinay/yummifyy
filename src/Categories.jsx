@@ -14,7 +14,7 @@ import thumbs from './Food-imgs/sprite.webp';
 import chicken65 from './Food-imgs/chicken65.webp';
 import lolipop from './Food-imgs/chicken-lolipop.jpg';
 import keb from './Food-imgs/Chicken-Kebab.jpg';
-import prawanFry  from './Food-imgs/prawnsFry.jpg';
+import prawanFry  from './Food-imgs/PrawnsFry.jpg';
 import Butternan from './Food-imgs/butterchicken&nan.jpg';
 import prawanbri from './Food-imgs/prawan-bri.jpg';
 import chibri from './Food-imgs/ChickenBiryani.webp';
