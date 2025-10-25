@@ -9,7 +9,7 @@ import Buttersoc from './Food-imgs/Butterscotch.webp';
 import vanilea from './Food-imgs/Vanilla.webp';
 import straberry from './Food-imgs/Strawberry-Delight.jpg';
 import coc from './Food-imgs/Coca-Cola.png';
-import Rose from './Food-imgs/Rose-milk.jpg';
+import Rose from './Food-imgs/Rose-Milk.jpg';
 import thumbs from './Food-imgs/sprite.webp';
 import chicken65 from './Food-imgs/chicken65.webp';
 import lolipop from './Food-imgs/chicken-lolipop.jpg';
