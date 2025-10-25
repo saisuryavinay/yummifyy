@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // React Router for navigation
 import HeroImage from "./Food-imgs/Soups.png";
-import Main from "./Food-imgs/Main Course.png";
+import Main from "./Food-imgs/Main-Course.png";
 import nonVeg from "./Food-imgs/non-vegg.jpg";
 import Vegg from "./Food-imgs/vegg.jpg";
 import IceCreams from "./Food-imgs/Desserts.png";

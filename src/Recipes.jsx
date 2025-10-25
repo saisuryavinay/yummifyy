@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import "./Recipes.css";
 import Noodles from "./Food-imgs/Noodles.png";
-import Veggstart from "./Food-imgs/Veg Starters.png";
-import NonVegg from "./Food-imgs/Non-veg Starters.png";
-import MainCo from "./Food-imgs/Main Course.png";
+import Veggstart from "./Food-imgs/Veg-Starters.png";
+import NonVegg from "./Food-imgs/Non-veg-Starters.png";
+import MainCo from "./Food-imgs/Main-Course.png";
 import seaFood from "./Food-imgs/sea-food.png";
 import IceCream from "./Food-imgs/Desserts.png";
 import Soups from "./Food-imgs/Soups.png";
