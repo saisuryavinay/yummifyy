@@ -1,5 +1,5 @@
 
-                                                                __🔗 Explore it here: (https://yummify-zeta.vercel.app)__
+                                        __🔗 Explore it here: (https://yummify-zeta.vercel.app)__
 
 🍴 YummiFy — Foodie’s Paradise Awaits! 😋
 
