@@ -176,3 +176,8 @@ nav a.active::after {
   background-image: url(./Food-imgs/cart-back.png);
   padding-top:100px
 }
+.cart p{
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 510px;
+}

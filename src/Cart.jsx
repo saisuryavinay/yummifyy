@@ -4,6 +4,7 @@ function Cart(){
     return(
         <div className="cart">
             <h2>Welcome To Cart Page</h2>
+            <p>⚠️Currently Your Cart is empty</p>
         </div>
     );
 }
