@@ -32,6 +32,7 @@ import minivegThali from './Food-imgs/minivegthali.jpg';
 import vegThali from './Food-imgs/vegthali.webp';
 import VegIcon from './Food-imgs/veg-icon.png';
 import nonVegIcon from './Food-imgs/non-vegIcon.png';
+import { Link } from "react-router-dom";
 import Cart from './Cart.jsx';
 
 import "./Recipes.css";
@@ -112,9 +113,9 @@ function Categories() {
                 <h3>{item.name}</h3>
                 <div className="item-buttons">
                   <button className="btn minus">-</button>
-                  <a href="./Cart">
-                  <button className="btn buy">Buy Now</button>
-                  </a>
+                  
+                  <Link className="btn buy" to="/Cart">Buy Now</Link>
+                  
                   <button className="btn plus">+</button>
                 </div>
               </div>
