@@ -43,7 +43,7 @@ function Recipes() {
           <div key={index} className="menu-card">
             <img src={item.img} alt={item.title} className="menu-image" />
             <h2 className="menu-item-title">{item.title}</h2>
-            <a href="/categories" className="menu-link">
+            <a href="/Categories" className="menu-link">
               View All
             </a>
           </div>

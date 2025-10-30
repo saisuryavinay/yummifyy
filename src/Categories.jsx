@@ -112,7 +112,7 @@ function Categories() {
                 <h3>{item.name}</h3>
                 <div className="item-buttons">
                   <button className="btn minus">-</button>
-                  <a href="cart">
+                  <a href="./Cart">
                   <button className="btn buy">Buy Now</button>
                   </a>
                   <button className="btn plus">+</button>

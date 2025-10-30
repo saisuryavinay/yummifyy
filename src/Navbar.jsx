@@ -22,7 +22,7 @@ function Navbar() {
 
       <div className="header-right">
         <div className="cart">
-          <a href="/cart">
+          <a href="/Cart">
           <img src={cartIcon} alt="Cart" />
           <span className="badge">2</span>
           </a>
