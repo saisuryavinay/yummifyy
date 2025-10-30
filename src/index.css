@@ -36,7 +36,7 @@ header {
 
 .logo:hover {
   transform: scale(1.1);
-  color: #ff6347; /* tomato red on hover */
+  color: #ff6347;
 }
 
 /* 🧭 Navigation Links */
@@ -163,4 +163,16 @@ nav a.active::after {
 .btn-login:hover {
   background: #ff4500;
   transform: scale(1.05);
+}
+
+/* carttsssssssssssssss */
+
+.cart h2{
+  width: auto;
+  height: auto;
+  margin-left: 460px;
+  font-size: 26px;
+  color: #ff4500;
+  background-image: url(./Food-imgs/cart-back.png);
+  padding-top:100px
 }

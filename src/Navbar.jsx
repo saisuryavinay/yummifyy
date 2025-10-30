@@ -22,8 +22,10 @@ function Navbar() {
 
       <div className="header-right">
         <div className="cart">
+          <a href="/cart">
           <img src={cartIcon} alt="Cart" />
           <span className="badge">2</span>
+          </a>
         </div>
         {/* <button className="btn-sginin">
           <img src={signinIcon} alt="Sign In" className="imge-si"/>

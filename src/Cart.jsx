@@ -1,10 +1,10 @@
 import React from "react";
-
+import "./index.css";
 function Cart(){
     return(
-        <>
-            <h2 style={{paddingTop:"100px",marginRight:"-200px"}}>This is cart</h2>
-        </>
+        <div className="cart">
+            <h2>Welcome To Cart Page</h2>
+        </div>
     );
 }
 
