@@ -10,6 +10,7 @@ import Soups from "./Food-imgs/Soups.png";
 import Salad from "./Food-imgs/Salads.png";
 import mandhi from "./Food-imgs/non-vegg.jpg";
 import vegThali from "./Food-imgs/thali.jpg";
+import { Link } from "react-router-dom";
 
 function Recipes() {
   const alertShown = useRef(false);
@@ -43,9 +44,18 @@ function Recipes() {
           <div key={index} className="menu-card">
             <img src={item.img} alt={item.title} className="menu-image" />
             <h2 className="menu-item-title">{item.title}</h2>
-            <a href="/Categories" className="menu-link">
+            <Link
+              to="/Categories"
+              style={{
+                color: "#F0A04B",
+                textDecoration: "none",
+                // fontWeight: "bold",
+                
+                cursor: "pointer",
+              }}
+            >
               View All
-            </a>
+            </Link>
           </div>
         ))}
       </div>

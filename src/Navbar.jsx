@@ -2,7 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import cartIcon from "./Food-imgs/cart.png";
 import signinIcon from "./Food-imgs/sign-in.png";
+import { Link } from "react-router-dom";
 import loginIcon from "./Food-imgs/login.png";
+import Categories from "./Categories";
 import "./index.css";
 
 function Navbar() {
@@ -22,10 +24,10 @@ function Navbar() {
 
       <div className="header-right">
         <div className="cart">
-          <a href="/Cart">
+          <Link to="/Categories">
           <img src={cartIcon} alt="Cart" />
           <span className="badge">2</span>
-          </a>
+          </Link>
         </div>
         {/* <button className="btn-sginin">
           <img src={signinIcon} alt="Sign In" className="imge-si"/>
