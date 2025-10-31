@@ -110,12 +110,14 @@ function Categories() {
             {cat.items.map((item, i) => (
               <div className="item-card" key={i}>
                 <img src={item.img} alt={item.name} className="item-img" />
+                <h4>{item.price}</h4>
                 <h3>{item.name}</h3>
+
                 <div className="item-buttons">
                   <button className="btn minus">-</button>
                   
                   <Link className="btn buy" to="/Cart">Buy Now</Link>
-                  
+
                   <button className="btn plus">+</button>
                 </div>
               </div>
