@@ -173,11 +173,24 @@ nav a.active::after {
   margin-left: 460px;
   font-size: 26px;
   color: #ff4500;
-  background-image: url(./Food-imgs/cart-back.png);
   padding-top:100px
 }
 .cart p{
   font-size: 12px;
   font-weight: bold;
   margin-left: 510px;
+}
+
+.billing{
+  width: 300px;
+  height: 450px;
+  border: 2px solid #EF7722;
+  margin-left: 940px;
+  position: fixed;
+}
+.billing p{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 8px;
 }

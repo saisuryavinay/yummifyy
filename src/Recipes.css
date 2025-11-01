@@ -65,6 +65,13 @@
   transition: gap 0.3s ease, color 0.3s ease;
 }
 
+.item-price {
+  font-size: 16px;
+  color: oklab(63.487% 0.13436 0.11974);
+  font-weight: 600;
+  margin: 9px 10px;
+}
+
 .menu-link:hover {
   gap: 10px;
   color: #b09000;
