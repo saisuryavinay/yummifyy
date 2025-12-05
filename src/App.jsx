@@ -6,6 +6,7 @@ import Recipes from './Recipes.jsx';
 import Categories from './Categories.jsx';
 import Contact from './Contact.jsx'
 import PageNOTFOUND from './PageNOTFOUND.jsx';
+import LoginSignup from './LoginSignup.jsx';
 import Cart from './Cart.jsx'
 import './index.css';
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="*" element={<PageNOTFOUND />} />
       </Routes>
     </BrowserRouter>
+    // <LoginSignup />
   );
 }
 

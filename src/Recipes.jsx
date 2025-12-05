@@ -31,7 +31,7 @@ function Recipes() {
     { title: "Mandhi", img: mandhi },
     { title: "Veg Thali", img: vegThali },
     { title: "Noodles", img: Noodles },
-    { title: "Salads", img: Salad },
+    { title: "Fruits", img: Salad },
     { title: "Desserts", img: IceCream },
   ];
 
