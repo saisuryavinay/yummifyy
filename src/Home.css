@@ -150,13 +150,14 @@ html, body, #root {
 
 .hero-content p {
   color: #eee; 
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.5;
   margin-bottom: 15px;
 }
 
 .hero-content h4 {
   font-weight: 500;
+  font-size: 18px;
   margin-bottom: 25px;
   color: rgb(212, 163, 4); 
 }

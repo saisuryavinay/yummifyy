@@ -26,12 +26,12 @@ function Navbar() {
       <div className="logo">YummiFy</div>
 
       <nav>
-        <NavLink to="/" end>
+        <NavLink to="/" end style={{fontSize:20}}>
           Home
         </NavLink>
-        <NavLink to="/Recipes">Recipes</NavLink>
-        <NavLink to="/Categories">Categories</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
+        <NavLink to="/Recipes" style={{fontSize:20}}>Recipes</NavLink>
+        <NavLink to="/Categories" style={{fontSize:20}}>Categories</NavLink>
+        <NavLink to="/contact" style={{fontSize:20}}>Contact</NavLink>
       </nav>
 
       <div className="header-right">
@@ -42,7 +42,7 @@ function Navbar() {
           </Link>
         </div>
 
-        <button className="btn-login" onClick={notify}>
+        <button className="btn-login" onClick={notify} style={{fontSize:16}}>
           Login
         </button>
 
