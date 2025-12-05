@@ -26,12 +26,12 @@ function Navbar() {
       <div className="logo">YummiFy</div>
 
       <nav>
-        <NavLink to="/" end style={{fontSize:21}}>
+        <NavLink to="/" end>
           Home
         </NavLink>
-        <NavLink to="/Recipes" style={{fontSize:21}}>Recipes</NavLink>
-        <NavLink to="/Categories" style={{fontSize:21}}>Categories</NavLink>
-        <NavLink to="/contact" style={{fontSize:21}}>Contact</NavLink>
+        <NavLink to="/Recipes">Recipes</NavLink>
+        <NavLink to="/Categories">Categories</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </nav>
 
       <div className="header-right">
