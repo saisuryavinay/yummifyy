@@ -84,10 +84,11 @@
   flex-direction: column;
   gap: 40px;
   padding-bottom: 40px;
-  padding-top: 140px;
+  padding-top: 88px;
 }
 
 .category-section {
+  flex-wrap: wrap;
   margin-bottom: 10px;
 }
 .categories {
@@ -124,6 +125,90 @@
 .item-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(255, 102, 0, 0.3);
+}
+
+/* Search Icon */
+.search-box {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.search-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.search-bar-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 20px 60px;
+  gap: 12px;
+}
+
+.search-input {
+  padding: 10px 15px;
+  width: 260px;
+  border: 2px solid #ff7a00;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.close-icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+/* Veg nonn all icons */
+.icon-row {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 4px 0px;
+  align-items: center;
+  margin-left: 780px;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vegicon,
+.nonvegicon, .Allitems {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));
+}
+
+
+.icon-label-non {
+  font-size: 16px;
+  margin-left: 120px;
+  margin-top: -28px;
+  font-weight: 600;
+  color: #333;
+}
+
+.icon-label-veg{
+  font-size: 16px;
+  margin-left: 68px;
+  margin-top: -28px;
+  font-weight: 600;
+  color: #333;
+}
+.icon-label-all{
+  font-size: 16px;
+  margin-left: 92px;
+  margin-top: -28px;
+  font-weight: 600;
+  color: #333;
 }
 
 .price-qty-row {
@@ -382,7 +467,6 @@
   line-height: 1.4;
 }
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
   .contact-container {
     flex-direction: column;

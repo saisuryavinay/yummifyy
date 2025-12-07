@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Recipes.css";
-import { ToastContainer, toast, Bounce } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast, Bounce, Slide } from "react-toastify";
 
-// IMAGES
 import Idli from "./Food-imgs/idli.webp";
 import Dosa from "./Food-imgs/Dosa.jpg";
 import masaladosa from "./Food-imgs/masaladosa.jpg";
@@ -57,23 +55,42 @@ import apples from "./Food-imgs/apples.webp";
 import pineapple from "./Food-imgs/pineapple.webp";
 import commingsoon from "./Food-imgs/commingsoon.jpg";
 
+import nonvegicon from "./Food-imgs/non-vegIcon.png";
+import vegicon from "./Food-imgs/veg-icon.png";
+import Allitems from "./Food-imgs/Allitems.png";
+
+import searchIcon from "./Food-imgs/searchIcon.png";  
+import closeIcon from "./Food-imgs/closeIcon.png";     
+
 function Categories() {
+
+  const [filterType, setFilterType] = useState("all");
+
+  const [showSearch, setShowSearch] = useState(false);
+  const [searchText, setSearchText] = useState("");
+
   const notify = () => {
     toast.success("Item Added to Cart!", {
       position: "top-right",
       autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
       theme: "light",
       transition: Bounce,
     });
   };
 
-  const categories = [
-    {
+   const notifyy = () => {
+    toast.info("Filter applied successfully!", {
+      position: "top-right",
+      autoClose: 2000,
+      theme: "light",
+      transition: Slide,
+    });
+  };
+
+  const allCategories = [
+        {
       title: "Breakfast",
+      type: "veg",
       items: [
         { img: Idli, name: "Idli", price: "₹20" },
         { img: Dosa, name: "Dosa", price: "₹30" },
@@ -84,6 +101,70 @@ function Categories() {
         { img: Bajji, name: "Bajji", price: "₹30" },
       ],
     },
+
+    {
+      title: "Non-Veg Starters",
+      type: "nonveg",
+      items: [
+        { img: chicken65, name: "Chicken 65", price: "₹160" },
+        { img: lolipop, name: "Chicken Lolipop", price: "₹180" },
+        { img: keb, name: "Chicken Kebab", price: "₹190" },
+        { img: prawanFry, name: "Prawn Fry", price: "₹220" },
+        { img: eggchill, name: "Egg chilli", price: "₹80" },
+        { img: fishtika, name: "Fish Tikka", price: "₹140" },
+        { img: prawantan, name: "Prawn Tandoori", price: "₹140" },
+      ],
+    },
+
+    {
+      title: "Non-Veg Main Course",
+      type: "nonveg",
+      items: [
+        { img: Butternan, name: "Butter Chicken", price: "₹200" },
+        { img: prawanbri, name: "Prawn Biryani", price: "₹240" },
+        { img: chibri, name: "Chicken Biryani", price: "₹180" },
+        { img: chimubri, name: "Chicken Mughlai", price: "₹210" },
+        { img: muttonbri, name: "Mutton Biryani", price: "₹260" },
+        { img: egg, name: "Egg Biryani", price: "₹180" },
+      ],
+    },
+
+    {
+      title: "Veg Starters",
+      type: "veg",
+      items: [
+        { img: panner65, name: "Paneer 65", price: "₹120" },
+        { img: pannertik, name: "Paneer Tikka", price: "₹130" },
+        { img: gobi, name: "Gobi Manchurian", price: "₹100" },
+        { img: babycorn, name: "Baby Corn Crispy", price: "₹60" },
+        { img: vegspring, name: "Veg Spring Rolls", price: "₹60" },
+      ],
+    },
+
+    {
+      title: "Veg Main Course",
+      type: "veg",
+      items: [
+        { img: vegbri, name: "Veg Biryani", price: "₹110" },
+        { img: vegfrirrice, name: "Veg Fried Rice", price: "₹100" },
+        { img: pannerbut, name: "Paneer Butter Masala", price: "₹140" },
+        { img: crudrice, name: "Crud Rice", price: "₹100" },
+        { img: vegpulao, name: "Veg Pulao", price: "₹110" },
+        { img: pulihora, name: "Pulihora", price: "₹80" },
+      ],
+    },
+
+    {
+      title: "Veg & Non-Veg Thalis",
+      type: "mixed",
+      items: [
+        { img: minivegThali, name: "Mini Veg Thali", price: "₹150" },
+        { img: vegThali, name: "Veg Thali", price: "₹240" },
+        { img: chickenThali, name: "Chicken Thali", price: "₹350" },
+        { img: NonVeg, name: "Non-Veg Thali", price: "₹500" },
+      ],
+    },
+    
     {
       title: "Desserts & Drinks",
       items: [
@@ -95,59 +176,7 @@ function Categories() {
         { img: thumbs, name: "Sprite", price: "₹40" },
       ],
     },
-    {
-      title: "Non-Veg Starters",
-      items: [
-        { img: chicken65, name: "Chicken 65", price: "₹160" },
-        { img: lolipop, name: "Chicken Lolipop", price: "₹180" },
-        { img: keb, name: "Chicken Kebab", price: "₹190" },
-        { img: prawanFry, name: "Prawn Fry", price: "₹220" },
-        { img: eggchill, name: "Egg chilli", price: "₹80" },
-        { img: fishtika, name: "Fish Tikka", price: "₹140" },
-        { img: prawantan, name: "Prawn Tandoori", price: "₹140" },
-      ],
-    },
-    {
-      title: "Non-Veg Main Course",
-      items: [
-        { img: Butternan, name: "Butter Chicken", price: "₹200" },
-        { img: prawanbri, name: "Prawn Biryani", price: "₹240" },
-        { img: chibri, name: "Chicken Biryani", price: "₹180" },
-        { img: chimubri, name: "Chicken Mughlai", price: "₹210" },
-        { img: muttonbri, name: "Mutton Biryani", price: "₹260" },
-        { img: egg, name: "Egg Briyani", price: "₹180" },
-      ],
-    },
-    {
-      title: "Veg Starters",
-      items: [
-        { img: panner65, name: "Paneer 65", price: "₹120" },
-        { img: pannertik, name: "Paneer Tikka", price: "₹130" },
-        { img: gobi, name: "Gobi Manchurian", price: "₹100" },
-        { img: babycorn, name: "Baby Corn Crispy", price: "₹60" },
-        { img: vegspring, name: "Veg Spring Rolls", price: "₹60" },
-      ],
-    },
-    {
-      title: "Veg Main Course",
-      items: [
-        { img: vegbri, name: "Veg Biryani", price: "₹110" },
-        { img: vegfrirrice, name: "Veg Fried Rice", price: "₹100" },
-        { img: pannerbut, name: "Paneer Butter Masala", price: "₹140" },
-        { img: crudrice, name: "Crud Rice", price: "₹100" },
-        { img: vegpulao, name: "Veg Pulao", price: "₹110" },
-        { img: pulihora, name: "Pulihora", price: "₹80" },
-      ],
-    },
-    {
-      title: "Veg & Non-Veg Thalis",
-      items: [
-        { img: minivegThali, name: "Mini Veg Thali", price: "₹150" },
-        { img: vegThali, name: "Veg Thali", price: "₹240" },
-        { img: chickenThali, name: "Chicken Thali", price: "₹350" },
-        { img: NonVeg, name: "Non-Veg Thali", price: "₹500" },
-      ],
-    },
+
     {
       title: "Fruits",
       items: [
@@ -159,10 +188,69 @@ function Categories() {
       ],
     },
   ];
+  const filtered = allCategories.filter(cat => {
+    if (filterType === "veg") return cat.type === "veg";
+    if (filterType === "nonveg") return cat.type === "nonveg";
+    return true;
+  });
+// search applies
+  const searched = filtered
+    .map(cat => ({
+      ...cat,
+      items: cat.items.filter(item =>
+        item.name.toLowerCase().includes(searchText.toLowerCase())
+      ),
+    }))
+    .filter(cat => cat.items.length > 0);
 
   return (
     <div className="all-caties">
-      {categories.map((cat, index) => (
+
+      {!showSearch && (
+        <div className="icon-row">
+
+          <div className="icon-box"  onClick={() => setFilterType("veg")}>
+            <img src={vegicon} className="vegicon"  onClick={notifyy}/>
+            <p className="icon-label-veg" onClick={notifyy}>Veg</p>
+          </div>
+
+          <div className="icon-box" onClick={() => setFilterType("nonveg")}>
+            <img src={nonvegicon} className="nonvegicon" onClick={notifyy}/>
+            <p className="icon-label-non" onClick={notifyy}>Non Veg</p>
+          </div>
+
+          <div className="icon-box" onClick={() => setFilterType("all")}>
+            <img src={Allitems} className="Allitems"  onClick={notifyy}/>
+            <p className="icon-label-all" onClick={notifyy}>All Items</p>
+          </div>
+          
+          <div className="icon-box search-box" onClick={() => setShowSearch(true)}>
+            <img src={searchIcon} className="search-icon" />
+          </div>
+        </div>
+      )}
+
+      {showSearch && (
+        <div className="search-bar-wrap">
+          <input
+            type="text"
+            className="search-input"
+            placeholder="Search food..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+
+          <img
+            src={closeIcon}
+            className="close-icon"
+            onClick={() => {
+              setShowSearch(false);
+              setSearchText("");
+            }}
+          />
+        </div>
+      )}
+      {searched.map((cat, index) => (
         <div key={index} className="category-section">
           <div className="categories">
             <h2>{cat.title}</h2>
@@ -170,12 +258,14 @@ function Categories() {
 
           <div className="items">
             {cat.items.map((item, i) => (
-              <div className="item-card">
-                <img src={item.img} alt={item.name} className="item-img" />
+              <div className="item-card" key={i}>
+                <img src={item.img} className="item-img" />
 
                 <h3 className="item-name">{item.name}</h3>
+
                 <div className="price-qty-row">
-                  <p className="item-price">{item.price}</p>
+                  <p className="item-price">{item.price ?? ""}</p>
+
                   <select className="qty-dropdown">
                     {[...Array(10)].map((_, n) => (
                       <option key={n} value={n + 1}>
@@ -186,12 +276,7 @@ function Categories() {
                 </div>
 
                 <div className="item-buttons">
-                  <Link
-                    className="btn buy"
-                    to=""
-                    onClick={notify}
-                    style={{ textDecoration: "none" }}
-                  >
+                  <Link className="btn buy" onClick={notify} style={{textDecoration:"none"}}>
                     Add Item
                   </Link>
                 </div>
@@ -200,6 +285,7 @@ function Categories() {
           </div>
         </div>
       ))}
+
       <ToastContainer />
     </div>
   );

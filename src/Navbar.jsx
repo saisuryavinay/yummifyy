@@ -45,7 +45,6 @@ function Navbar() {
         <button className="btn-login" onClick={notify} style={{fontSize:16}}>
           Login
         </button>
-
         <ToastContainer />
       </div>
     </header>
