@@ -1,127 +1,267 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
 
-.container {
-  width: 100%;
-  height: 100vh;
-  background: #f5f8fc;
+.page-bg-modal {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent !important;
 }
 
-.card {
+.modal-content {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+
+
+
+.login-card {
   width: 360px;
-  padding: 35px;
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 18px 40px rgba(19, 24, 43, 0.12);
+  overflow: visible;
+  position: relative;
 }
 
-.card h2 {
-  font-size: 28px;
-  color: #111;
-  font-weight: 600;
+.top-curve {
+  height: 180px;
+  background: #06388f;
+  border-bottom-left-radius: 300px;
+  border-bottom-right-radius: 100px;
+  border-top-right-radius: 200px;
+}
+.leaf1{
+  height: 128px;
+  width: 126px;
+  position: relative;
+  top: 148px;
+  left: -110px;
+  filter: blur(1px);
+}
+
+.bigredtom{
+  width: 140px;
+  height: 140px;
+  position: relative;
+  left: -84px;
+  top: 50px;
+}
+.bigredtom1{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 90px;
+  filter: blur(1.2px);
+
+}
+.tomslice{
+  width: 60px;
+  height: 60px;
+  top: 40px;
+  left: 180px;
+  position: relative;
+  filter: blur(1px);
+}
+
+.greenchilli{
+  width: 60px;
+  height: 60px;
+  position: relative;
+  left: 160px;
+  top: 48px;
+  filter: blur(2px);
+}
+
+.yellowtom{
+  width: 68px;
+  height: 68px;
+  position: relative;
+  left: 210px;
+  top: -168px;
+}
+.tomslice2{
+  width: 60px;
+  height: 60px;
+  position: relative;
+  left: 60px;
+  filter: blur(1px);
+  top: -60px;
+}
+
+.on1{
+  width: 40px;
+  height: 40px;
+  left: -240px;
+  filter: blur(1px);
+  top: -60px;
+  position: relative;
+}
+
+.leaf2{
+  width: 80px;
+  height: 80px;
+  position: relative;
+  filter: blur(2px);
+  left: 60px;
+  top: -80px;
+}
+.hero-wrap {
+  position: absolute;
+  left: 90%;
+  transform: translateX(-50%);
+  top: 18px;
+  width: 160px;
+  height: 160px;
+  border-radius: 999px;
+  padding: 6px;
+  box-shadow: 0 14px 40px rgba(20,28,60,0.16);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 6px 18px rgba(3,12,40,0.10);
+}
+
+.form-body {
+  padding: 20px 26px 16px;
+  box-sizing: border-box;
+}
+
+.redtom{
+  width: 30px;
+  height: 30px;
+
+}
+.lbl {
+  display: block;
+  font-size: 13px;
+  color: #3b4a63;
   margin-bottom: 6px;
+  margin-top: 6px;
+  font-weight: 600;
 }
 
-.subtext {
-  font-size: 15px;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.subtext a {
-  color: #007bff;
-  text-decoration: none;
-}
 .input {
   width: 100%;
-  padding: 13px;
-  border: none;
-  background: #eef2f7;
-  border-radius: 10px;
-  margin-bottom: 14px;
-  font-size: 15px;
-  transition: 0.2s;
+  height: 46px;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: 1.2px solid #e2e8f0;
+  box-sizing: border-box;
+  background: #fff;
+  outline: none;
 }
 
-.input:focus {
-  outline: none;
-  background: #e4e8ef;
-}
+.input::placeholder { color: #bfc9d8; }
+
 .forgot {
   text-align: right;
-  margin-bottom: 18px;
-}
-
-.forgot a {
   font-size: 14px;
-  text-decoration: none;
-  color: #007bff;
+  color: #6c7586;
+  margin-top: 8px;
+  margin-bottom: 6px;
 }
+.action-area { padding: 12px 26px 8px; box-sizing: border-box; }
+
 .login-btn {
   width: 100%;
-  padding: 13px;
-  background: #6e8efb;
-  color: #fff;
+  height: 44px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #0a3a8f 0%, #06388f 100%);
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
   font-size: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.2s;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(6, 56, 143, 0.18);
 }
 
-.login-btn:hover {
-  background: #5f7ced;
-}
-
-.divider {
-  display: flex;
-  align-items: center;
+.btn-text { 
   text-align: center;
-  background: #777;
-  font-size: 18px;
-  margin: 20px 64px;
+  margin-left: 96px;
+  font-size: 20px;
 }
-
-.divider::before,
-.divider::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: #ddd;
-}
-
-.divider span {
-  padding: 0 19px;
-  background: #fff;
-}
-
-.social-btn {
-  width: 100%;
-  padding: 13px;
-  background: #fff;
-  border: 1px solid #ececec;
-  border-radius: 10px;
+.title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
   display: flex;
+  flex-direction: column;
+}
+
+.title .line1 {
+  font-size: 32px;
+  margin-left: 40px;
+  margin-top: 50px;
+  opacity: 0.95;
+}
+
+.title .line2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: rgb(184, 197, 197);
+  margin-top: -2px;
+  margin-left: 100px;
+}
+
+
+.btn-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 12px;
-  cursor: pointer;
-  font-size: 15px;
-  transition: 0.2s;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(3, 12, 40, 0.12);
+}
+.welcome-back{
+  font-size: 20px;
+  font-weight: 1000;
+  margin-left: 100px;
+  margin-top: 20px;
+  color: #0b4ec1;
 }
 
-.social-btn img {
-  width: 22px;
-  height: 22px;
+/* Footer pill */
+.footer-pill {
+  margin: 12px 22px 20px;
+  background: #eef3ff;
+  color: #3b4a63;
+  padding: 10px 14px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 13px;
+  box-shadow: 0 4px 8px rgba(3, 12, 40, 0.03);
 }
+.register-link { color: #06388f; font-weight: 700; margin-left: 6px; cursor: pointer; }
 
-.social-btn:hover {
-  background: #f7f7f7;
+@media (max-width: 420px) {
+  .login-card { width: 300px; }
+  .hero-wrap { width: 120px; height: 120px; top: 62px; }
+  .login-btn { height: 60px; }
+  .btn-circle { width: 40px; height: 40px; }
+  .white-cut { height: 60px; }
+  .dec { width: 22px; height: 22px; }
+  .dec-top-left { width: 36px; height: 36px; left: 8px; top: 8px; }
 }
